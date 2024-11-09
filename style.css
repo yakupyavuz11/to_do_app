@@ -1,55 +1,93 @@
-body{
-font-family: Arial, Helvetica, sans-serif;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
-background: #222;
-background-image: url('https://source.unsplash.com/1600x900/?landscape');
-font-size: 120%;
-
-}
-
-#app {              
-
-width: 300px;
-text-align: center;
-}
-
-input[type="text"] {
-          width: 100%;
-          padding: 10px;
-          margin-bottom: 10px;
-          box-sizing: border-box;
+body {
+          font-family: Arial, sans-serif;
+          background: #c53b49;
+          color: #333;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
         }
         
-        button {
-          padding: 10px;
+        /* Kapsayıcı */
+        .container {
           width: 100%;
+          max-width: 400px;
+          padding: 20px;
+          background: #fff;
+          border-radius: 10px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+        
+        /* Başlık */
+        h1 {
+          color: #333;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        
+        /* Input alanı */
+        .input-group {
+          display: flex;
+          margin-bottom: 20px;
+        }
+        
+        #taskInput {
+          flex: 1;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px 0 0 5px;
+          outline: none;
+        }
+        
+        #addTaskButton {
+          padding: 10px;
           background-color: #28a745;
-          color: white;
+          color: #fff;
           border: none;
+          border-radius: 0 5px 5px 0;
           cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
         }
         
-        button:hover {
+        #addTaskButton:hover {
           background-color: #218838;
         }
         
-        ul {
-          list-style-type: none;
+        /* Görev listesi */
+        #taskList {
+          list-style: none;
           padding: 0;
         }
         
-        li {
+        #taskList li {
           display: flex;
           justify-content: space-between;
+          align-items: center;
           padding: 10px;
-          border-bottom: 1px solid #ddd;
+          background-color: #f8f9fa;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
         }
         
-        .completed {
+        #taskList li.completed {
           text-decoration: line-through;
-          color: grey;
+          color: #6c757d;
         }
+        
+        #taskList li button {
+          border: none;
+          background: none;
+          color: #dc3545;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        
+        #taskList li button:hover {
+          color: #bd2130;
+        }
+        
